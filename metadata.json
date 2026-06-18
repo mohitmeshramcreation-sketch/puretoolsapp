@@ -1,0 +1,6 @@
+{
+  "name": "PureTools",
+  "description": "PureTools is a modern, minimal, lightning-fast utilities platform offering a PDF Toolkit, Image Compressor & Converter, Universal File Converter, custom QR Code Generator, and an AI-powered Text Assistant—all without registration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
