@@ -32,7 +32,7 @@ export default function QRGenerator() {
 
     switch (activeTab) {
       case "text":
-        payload = textInput || "Welcome to PureTools!";
+        payload = textInput || "Welcome to PureTool!";
         break;
       case "url":
         payload = urlInput || "https://";
@@ -52,7 +52,7 @@ export default function QRGenerator() {
           // format: WIFI:S:SSID;T:WPA;P:PASSWORD;H:true;;
           payload = `WIFI:S:${wifiSsid};T:${wifiEncryption};P:${wifiPassword};H:${wifiHidden ? "true" : "false"};;`;
         } else {
-          payload = "WIFI:S:PureTools_WiFi;T:WPA;P:puretools123;;";
+          payload = "WIFI:S:PureTool_WiFi;T:WPA;P:puretool123;;";
         }
         break;
     }
@@ -94,7 +94,7 @@ export default function QRGenerator() {
     if (!qrDataUrl) return;
     const link = document.createElement("a");
     link.href = qrDataUrl;
-    link.download = `puretools_qr_${activeTab}.png`;
+    link.download = `puretool_qr_${activeTab}.png`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -214,7 +214,7 @@ export default function QRGenerator() {
                     type="text"
                     value={emailBody}
                     onChange={(e) => setEmailBody(e.target.value)}
-                    placeholder="Hi PureTools team..."
+                    placeholder="Hi PureTool team..."
                     className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-white"
                   />
                 </div>

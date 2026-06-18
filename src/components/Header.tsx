@@ -45,7 +45,7 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
           </div>
           <div>
             <span className="font-display text-base font-extrabold tracking-tight text-slate-900 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400 transition">
-              PureTools
+              PureTool
             </span>
             <span className="ml-1.5 rounded-sm bg-indigo-50 dark:bg-indigo-950/50 px-1 py-0.5 font-mono text-[8px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
               No-auth

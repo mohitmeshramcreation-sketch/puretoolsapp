@@ -19,11 +19,11 @@ export default function Footer({ onNavigate }: FooterProps) {
               <Wrench className="h-4.5 w-4.5 rotate-45" />
             </div>
             <span className="font-display text-sm font-extrabold tracking-tight text-slate-955 dark:text-white group-hover:text-indigo-600 transition">
-              PureTools
+              PureTool
             </span>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
-            PureTools is a private-by-design, browser-compiled utility environment. We provide 5 master tools: PDF converters, image compressors, file compilers, instant QR generators, and AI assistants. Completely registration-free, with zero telemetry tracking.
+            PureTool is a private-by-design, browser-compiled utility environment. We provide 5 master tools: PDF converters, image compressors, file compilers, instant QR generators, and AI assistants. Completely registration-free, with zero telemetry tracking.
           </p>
 
           <div className="flex gap-4 text-slate-400 text-3xs pt-2">
@@ -98,7 +98,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <form 
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Thank you for subscribing to PureTools updates!");
+              alert("Thank you for subscribing to PureTool updates!");
             }}
             className="flex gap-2"
           >
@@ -123,7 +123,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
       {/* Copy agreements footer */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-3xs font-mono font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-        <span>© {currentYear} PureTools Platform. All Rights Reserved.</span>
+        <span>© {currentYear} PureTool Platform. All Rights Reserved.</span>
         <span className="flex items-center gap-1.5 leading-none">
           Designed with <Heart className="h-3 w-3 text-rose-500 fill-rose-500 animate-pulse" /> for secure web workers
         </span>

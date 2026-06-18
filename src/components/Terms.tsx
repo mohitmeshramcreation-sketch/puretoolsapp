@@ -16,7 +16,7 @@ export default function Terms() {
             1. Scope of Use
           </h2>
           <p>
-            PureTools grants user a free, non-exclusive, non-transferable global license to access and complete document conversions, image processing, or marketing QR generation for any personal, corporate, academic, or commercial purposes.
+            PureTool grants user a free, non-exclusive, non-transferable global license to access and complete document conversions, image processing, or marketing QR generation for any personal, corporate, academic, or commercial purposes.
           </p>
         </section>
 
@@ -25,7 +25,7 @@ export default function Terms() {
             2. Proprietary Rights
           </h2>
           <p>
-            All custom graphics layouts, brand marks, and local compilation architectures remain the intellectual property of PureTools. Any files or folders uploaded or processed within our boundaries remain entirely yours, representing your private assets.
+            All custom graphics layouts, brand marks, and local compilation architectures remain the intellectual property of PureTool. Any files or folders uploaded or processed within our boundaries remain entirely yours, representing your private assets.
           </p>
         </section>
 
@@ -43,7 +43,7 @@ export default function Terms() {
             4. Service Limits & Modifications
           </h2>
           <p>
-            Because we operate entirely without paywalls or user log-ins, PureTools provides utility tools "as is" and "as available". We reserve the right to update compilation libraries, adjust tool layouts, or refine services at our sole discretion.
+            Because we operate entirely without paywalls or user log-ins, PureTool provides utility tools "as is" and "as available". We reserve the right to update compilation libraries, adjust tool layouts, or refine services at our sole discretion.
           </p>
         </section>
       </div>

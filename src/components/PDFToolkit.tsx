@@ -120,7 +120,7 @@ export default function PDFToolkit() {
       const url = URL.createObjectURL(blob);
 
       setResultsBlobUrl(url);
-      setResultsFileName(`puretools_merged_${Date.now()}.pdf`);
+      setResultsFileName(`puretool_merged_${Date.now()}.pdf`);
     } catch (err) {
       setErrorMsg("Failed to merge PDF files. Some files might contain restricted fonts or structures.");
       console.error(err);
@@ -183,7 +183,7 @@ export default function PDFToolkit() {
       const url = URL.createObjectURL(blob);
 
       setResultsBlobUrl(url);
-      setResultsFileName(`puretools_split_${splitPdfInput.name}`);
+      setResultsFileName(`puretool_split_${splitPdfInput.name}`);
     } catch (err: any) {
       setErrorMsg(err.message || "Failed to split specified pages. Check input syntax (e.g., '1-3').");
     } finally {
@@ -218,7 +218,7 @@ export default function PDFToolkit() {
       const url = URL.createObjectURL(blob);
 
       setResultsBlobUrl(url);
-      setResultsFileName(`puretools_compressed_${sourceMeta.name}`);
+      setResultsFileName(`puretool_compressed_${sourceMeta.name}`);
     } catch (err) {
       setErrorMsg("Failed to apply compression routine locally.");
     } finally {
@@ -287,7 +287,7 @@ export default function PDFToolkit() {
       const url = URL.createObjectURL(blob);
 
       setResultsBlobUrl(url);
-      setResultsFileName(`puretools_images_${Date.now()}.pdf`);
+      setResultsFileName(`puretool_images_${Date.now()}.pdf`);
     } catch (err) {
       setErrorMsg("Failed to compile images to PDF.");
       console.error(err);

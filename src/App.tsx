@@ -27,7 +27,7 @@ export default function App() {
 
   // Monitor and load light/dark theme settings from local storage
   useEffect(() => {
-    const savedTheme = localStorage.getItem("puretools-theme");
+    const savedTheme = localStorage.getItem("puretool-theme");
     if (savedTheme === "dark") {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
@@ -41,10 +41,10 @@ export default function App() {
     const nextDark = !darkMode;
     setDarkMode(nextDark);
     if (nextDark) {
-      localStorage.setItem("puretools-theme", "dark");
+      localStorage.setItem("puretool-theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
-      localStorage.setItem("puretools-theme", "light");
+      localStorage.setItem("puretool-theme", "light");
       document.documentElement.classList.remove("dark");
     }
   };

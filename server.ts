@@ -96,7 +96,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`PureTools Server listening on port ${PORT}`);
+    console.log(`PureTool Server listening on port ${PORT}`);
   });
 }
 

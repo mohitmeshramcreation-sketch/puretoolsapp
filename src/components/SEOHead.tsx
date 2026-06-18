@@ -13,8 +13,8 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
     const currentSlug = pageId === "home" ? "" : pageId;
     const canonicalUrl = `${baseUrl}/${currentSlug}`;
 
-    let title = "PureTools - Free Online Tools & Useful Utilities Suite";
-    let description = "Discover PureTools, an offline-first library of free online tools: high-ratio image compressor, PDF tools online, universal file converter, free QR code generator, and AI writing tools.";
+    let title = "PureTool - Free Online Tools & Useful Utilities Suite";
+    let description = "Discover PureTool, an offline-first library of free online tools: high-ratio image compressor, PDF tools online, universal file converter, free QR code generator, and AI writing tools.";
     let keywords = "free online tools, online tools website, free productivity tools, best free web tools, useful online utilities, all in one online tools";
     
     // Multi-schema containment array
@@ -25,7 +25,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": `${baseUrl}/#organization`,
-      "name": "PureTools",
+      "name": "PureTool",
       "url": baseUrl,
       "logo": `${baseUrl}/logo.png`,
     };
@@ -36,7 +36,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
       "@type": "WebSite",
       "@id": `${baseUrl}/#website`,
       "url": baseUrl,
-      "name": "PureTools",
+      "name": "PureTool",
       "description": "Free, simple and guest-friendly all-in-one web utilities platform.",
       "publisher": { "@id": `${baseUrl}/#organization` }
     };
@@ -69,8 +69,8 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
 
     switch (pageId) {
       case "home":
-        title = "PureTools - Free Online Tools Website | Best Free Web Tools & Useful Online Utilities";
-        description = "Discover PureTools, your all-in-one online tools website featuring free productivity tools, high-speed file converter utility blocks, PNG/JPG compressors, and advanced AI assistants with pure client-side privacy.";
+        title = "PureTool - Free Online Tools Website | Best Free Web Tools & Useful Online Utilities";
+        description = "Discover PureTool, your all-in-one online tools website featuring free productivity tools, high-speed file converter utility blocks, PNG/JPG compressors, and advanced AI assistants with pure client-side privacy.";
         keywords = "free online tools, online tools website, free productivity tools, best free web tools, useful online utilities, all in one online tools";
         
         schemas = [
@@ -83,10 +83,10 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What makes PureTools the best free web tools platform?",
+                "name": "What makes PureTool the best free web tools platform?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "PureTools offers highly secure, offline-first web technologies. Processing (like file optimization, PDF operations, or image format modifications) is carried out directly on your browser sandbox without document files ever leaving your device, delivering perfect data-privacy and safety."
+                  "text": "PureTool offers highly secure, offline-first web technologies. Processing (like file optimization, PDF operations, or image format modifications) is carried out directly on your browser sandbox without document files ever leaving your device, delivering perfect data-privacy and safety."
                 }
               },
               {
@@ -94,7 +94,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
                 "name": "Are there limits or fee tiers to compile files or compress assets?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. PureTools provides unlimited access to all system utilities including its file converter, JPG compressor, and custom QR maker completely free without registration constraints, membership obligations, or hidden credit systems."
+                  "text": "No. PureTool provides unlimited access to all system utilities including its file converter, JPG compressor, and custom QR maker completely free without registration constraints, membership obligations, or hidden credit systems."
                 }
               },
               {
@@ -111,7 +111,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "all-tools":
-        title = "All Tools Suite | Browse Useful Online Utilities - PureTools";
+        title = "All Tools Suite | Browse Useful Online Utilities - PureTool";
         description = "Explore our entire clean hub of free online tools. Easily compress image files without losing quality, perform PDF split and merges, convert layouts, make wireless QR codes, or apply serverless text proofreading.";
         keywords = "all in one online tools, online tools website, best free web tools, free productivity tools, useful online utilities";
         
@@ -123,7 +123,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How do I filter and find specific free online tools on PureTools?",
+                "name": "How do I filter and find specific free online tools on PureTool?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "You can use our global search input field or toggle visual categories (such as Documents, Design, and AI Assist) to instantly reveal specific utilities suited for your workflow."
@@ -135,7 +135,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "pdf-toolkit":
-        title = "Free PDF Tools Online | Merge, Split & Compress PDF - PureTools";
+        title = "Free PDF Tools Online | Merge, Split & Compress PDF - PureTool";
         description = "Make your paperwork easy with free PDF tools online. Instantly merge PDF online, split PDF online, compress PDF files, or compile images directly into standard Adobe formats safely in your local browser environment.";
         keywords = "free PDF tools online, compress PDF online, merge PDF online, split PDF online, convert PDF files";
         
@@ -144,7 +144,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
           {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "PureTools PDF Toolkit",
+            "name": "PureTool PDF Toolkit",
             "operatingSystem": "All",
             "applicationCategory": "BusinessApplication",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -176,7 +176,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "image-compressor":
-        title = "Image Compressor Online | Compress Image Without Losing Quality - PureTools";
+        title = "Image Compressor Online | Compress Image Without Losing Quality - PureTool";
         description = "Use our state-of-the-art image compressor online. Easily compress image without losing quality. Fully functional JPG compressor, PNG compressor, and multi-format resizer that works entirely in-browser.";
         keywords = "image compressor online, compress image without losing quality, JPG compressor, PNG compressor, image converter online";
         
@@ -185,7 +185,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
           {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "PureTools Image Compressor",
+            "name": "PureTool Image Compressor",
             "operatingSystem": "All",
             "applicationCategory": "DesignApplication",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -209,7 +209,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "file-converter":
-        title = "Universal File Converter | Convert PDF Files & Multi-Format Images - PureTools";
+        title = "Universal File Converter | Convert PDF Files & Multi-Format Images - PureTool";
         description = "Highly reliable image converter online. Convert PDF files, shift text documents to clean layouts, convert PNG to JPG, or transcode WebP instantly. Secure client-side execution.";
         keywords = "convert PDF files, image converter online, png to jpg converter, doc txt format shifts, webp transcoder";
         
@@ -228,7 +228,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "qr-generator":
-        title = "Free QR Code Generator | Create QR Code Online Instantly - PureTools";
+        title = "Free QR Code Generator | Create QR Code Online Instantly - PureTool";
         description = "Create custom layout markers with our free QR code generator. Quickly create QR code online for any URL QR generator parameters, phone calls, text, or local WiFi passwords.";
         keywords = "free QR code generator, create QR code online, URL QR generator, wireless layout generator";
         
@@ -237,7 +237,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
           {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "PureTools QR Code Generator",
+            "name": "PureTool QR Code Generator",
             "operatingSystem": "All",
             "applicationCategory": "UtilitiesApplication",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -247,7 +247,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "ai-text-tools":
-        title = "Free AI Writing Tools | Best AI Text Summarizer & Grammar Check - PureTools";
+        title = "Free AI Writing Tools | Best AI Text Summarizer & Grammar Check - PureTool";
         description = "Supercharge your copywriting workflows. Use free AI writing tools: powerful AI text summarizer, instant AI grammar checker, rewrite variations engine, and AI content assistant powered by secure models.";
         keywords = "free AI writing tools, AI text summarizer, AI grammar checker, AI content assistant, intelligence rewrites";
         
@@ -280,35 +280,35 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
         break;
 
       case "about":
-        title = "About Our Free Productivity Tools Philosophy - PureTools";
-        description = "Understand the principles of our all in one online tools. PureTools was engineered to offer beautiful online utilities with zero bloat, cookie tracking, or user storage logs.";
+        title = "About Our Free Productivity Tools Philosophy - PureTool";
+        description = "Understand the principles of our all in one online tools. PureTool was engineered to offer beautiful online utilities with zero bloat, cookie tracking, or user storage logs.";
         keywords = "about online tools, best free web tools Philosophy, zero tracking utilities";
         schemas = [generateBreadcrumb("About Us", "about")];
         break;
 
       case "contact":
-        title = "Contact Us | Feedback for Free Productivity Tools Hub - PureTools";
-        description = "Get in touch with the development ecosystem behind PureTools. Submit ideas, request new file converter layouts, or report issues directly.";
-        keywords = "contact puretools, support email, suggest features, bug reports";
+        title = "Contact Us | Feedback for Free Productivity Tools Hub - PureTool";
+        description = "Get in touch with the development ecosystem behind PureTool. Submit ideas, request new file converter layouts, or report issues directly.";
+        keywords = "contact puretool, support email, suggest features, bug reports";
         schemas = [generateBreadcrumb("Contact Us", "contact")];
         break;
 
       case "privacy":
-        title = "Privacy Policy | Safest Online Tools Website Promise - PureTools";
+        title = "Privacy Policy | Safest Online Tools Website Promise - PureTool";
         description = "Read how we secure your data. Since all our useful online utilities run inside your browser, user files are never processed or saved on a remote server.";
         keywords = "privacy policy, offline state safety, local files memory, security";
         schemas = [generateBreadcrumb("Privacy Policy", "privacy")];
         break;
 
       case "terms":
-        title = "Terms of Service | PureTools browser apps agreements";
+        title = "Terms of Service | PureTool browser apps agreements";
         description = "Learn more about our simplified terms structure. Open usage licenses, zero hidden memberships, and non-liability terms.";
         keywords = "terms of service, legal agreements, usage license";
         schemas = [generateBreadcrumb("Terms of Service", "terms")];
         break;
 
       case "disclaimer":
-        title = "Warranty Disclaimer | PureTools browser compilation limits";
+        title = "Warranty Disclaimer | PureTool browser compilation limits";
         description = "Read our standard warranty disclaimer regarding browser capabilities, storage memory structures, and regional compliance factors.";
         keywords = "disclaimer, warrant limits, local browser memory";
         schemas = [generateBreadcrumb("Disclaimer", "disclaimer")];
@@ -400,14 +400,14 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
     twDesc.setAttribute("content", description);
 
     // Inject complex composite JSON-LD Schema Markup
-    const existingSchemaScript = document.getElementById("puretools-ld-schema");
+    const existingSchemaScript = document.getElementById("puretool-ld-schema");
     if (existingSchemaScript) {
       existingSchemaScript.remove();
     }
 
     if (schemas && schemas.length > 0) {
       const script = document.createElement("script");
-      script.id = "puretools-ld-schema";
+      script.id = "puretool-ld-schema";
       script.type = "application/ld+json";
       script.text = JSON.stringify(schemas.length === 1 ? schemas[0] : schemas);
       document.head.appendChild(script);

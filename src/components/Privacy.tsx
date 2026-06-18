@@ -16,7 +16,7 @@ export default function Privacy() {
             1. Overview & Core Philosophy
           </h2>
           <p>
-            PureTools is engineered with an unwavering commitment to data sovereignty. Unlike standard utilities that stream uploads to remote cloud compilers for extraction, our environment leverages standard WebAssembly and offscreen browser canvas protocols. This means that your files, photos, and document arrays remain entirely within your browser window's memory stack and are destroyed immediately upon page close or tab dismissal.
+            PureTool is engineered with an unwavering commitment to data sovereignty. Unlike standard utilities that stream uploads to remote cloud compilers for extraction, our environment leverages standard WebAssembly and offscreen browser canvas protocols. This means that your files, photos, and document arrays remain entirely within your browser window's memory stack and are destroyed immediately upon page close or tab dismissal.
           </p>
         </section>
 
@@ -37,7 +37,7 @@ export default function Privacy() {
             3. Cookies and Telemetry
           </h2>
           <p>
-            PureTools does not integrate persistent tracking cookies, session identifiers, or marketing analytics pixels. We utilize standard, browser local-storage parameters solely to save your local visual preferences (e.g., active Light/Dark theme setting).
+            PureTool does not integrate persistent tracking cookies, session identifiers, or marketing analytics pixels. We utilize standard, browser local-storage parameters solely to save your local visual preferences (e.g., active Light/Dark theme setting).
           </p>
         </section>
 

@@ -80,7 +80,7 @@ export default function Home({ onNavigate }: HomeProps) {
   const faqs = [
     {
       question: "Are these free online tools completely safe from external data leaks?",
-      answer: "Absolutely. PureTools is a premium offline-first online tools website. All file optimization, layout conversions, and PNG/JPG compressions run within the visual boundaries of your browser memory. We have zero database channels tracking or capturing your standard files. Only the Gemini companion utilizes secure APIs to verify outputs instantly."
+      answer: "Absolutely. PureTool is a premium offline-first online tools website. All file optimization, layout conversions, and PNG/JPG compressions run within the visual boundaries of your browser memory. We have zero database channels tracking or capturing your standard files. Only the Gemini companion utilizes secure APIs to verify outputs instantly."
     },
     {
       question: "How can I compress image without losing quality using your tool?",
@@ -146,7 +146,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </h1>
 
         <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          PureTools delivers professional-grade utilities right inside your browser window. Zero tracking, zero wait times, and entirely private local compilation.
+          PureTool delivers professional-grade utilities right inside your browser window. Zero tracking, zero wait times, and entirely private local compilation.
         </p>
 
         {/* Search bar widget */}
@@ -262,7 +262,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      {/* 3. Benefits / Why PureTools section */}
+      {/* 3. Benefits / Why PureTool section */}
       {/* User-friendly online utilities */}
       <section className="bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-900 transition-all py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
@@ -271,7 +271,7 @@ export default function Home({ onNavigate }: HomeProps) {
               Designed For Web Workers Who Value Privacy
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-normal">
-              Unlike legacy platforms that upload raw folders to cloud databases, PureTools keeps everything sandboxed inside browser memory limits.
+              Unlike legacy platforms that upload raw folders to cloud databases, PureTool keeps everything sandboxed inside browser memory limits.
             </p>
           </div>
 

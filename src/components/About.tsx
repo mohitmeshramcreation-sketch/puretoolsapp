@@ -13,7 +13,7 @@ export default function About({ onNavigate }: AboutProps) {
           Our Privacy Philosophy
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          PureTools was founded in 2026 to deliver lightning fast, beautifully minimalist, and privacy-focused document utilities that prioritize user security over metadata mining.
+          PureTool was founded in 2026 to deliver lightning fast, beautifully minimalist, and privacy-focused document utilities that prioritize user security over metadata mining.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ export default function About({ onNavigate }: AboutProps) {
         </p>
 
         <p className="text-xs text-slate-505 dark:text-slate-400 leading-bold">
-          We designed PureTools as a counter-weight: an elegant environment running local WebAssembly code loops, converting and resizing everything inside your machine sandboxes. It represents a simpler, faster, and 100% private future for internet workers.
+          We designed PureTool as a counter-weight: an elegant environment running local WebAssembly code loops, converting and resizing everything inside your machine sandboxes. It represents a simpler, faster, and 100% private future for internet workers.
         </p>
       </div>
 

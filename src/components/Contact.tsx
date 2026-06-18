@@ -53,7 +53,7 @@ export default function Contact() {
                 Message Received successfully!
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto leading-relaxed">
-                Thank you for contributing to PureTools. Our engineering queue will analyze your request and reply shortly.
+                Thank you for contributing to PureTool. Our engineering queue will analyze your request and reply shortly.
               </p>
             </div>
             <button
