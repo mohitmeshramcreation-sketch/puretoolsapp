@@ -35,7 +35,19 @@ export default function Contact() {
         }),
       });
 
-      const data = await response.json();
+      let data: any = {};
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        try {
+          data = await response.json();
+        } catch (jsonErr) {
+          console.error("JSON parsing failed on response", jsonErr);
+          data = { error: "Received invalid server format." };
+        }
+      } else {
+        const rawText = await response.text();
+        data = { error: rawText || "An unexpected error occurred on the server." };
+      }
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to deliver contact inquiry.");

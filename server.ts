@@ -108,15 +108,32 @@ async function startServer() {
         })
       });
 
-      if (!response.ok) {
-        throw new Error("Form delivery network failure.");
+      const responseText = await response.text();
+      let result: any = null;
+      try {
+        result = JSON.parse(responseText);
+      } catch (parseErr) {
+        console.warn("Response from formsubmit was not valid JSON:", responseText);
+        result = { raw: responseText };
       }
 
-      const result = await response.json();
+      if (!response.ok) {
+        return res.status(response.status).json({
+          error: (result && result.message) || "Form delivery network returned error status."
+        });
+      }
+
+      // If FormSubmit specifically returns success: false, send message to client
+      if (result && result.success === "false") {
+        return res.status(400).json({
+          error: result.message || "Form submission failed."
+        });
+      }
+
       res.json({ success: true, result });
     } catch (e: any) {
       console.error("Secure Contact Integration Error:", e);
-      res.status(500).json({ error: "Failed to securely deliver your submission. Please try again later." });
+      res.status(500).json({ error: e.message || "Failed to securely deliver your submission. Please try again later." });
     }
   });
 
