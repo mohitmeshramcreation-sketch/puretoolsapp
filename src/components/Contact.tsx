@@ -10,7 +10,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
 
@@ -21,14 +21,35 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    // Simulate real network submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          topic,
+          message: message.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to deliver contact inquiry.");
+      }
+
       setSubmitted(true);
       setName("");
       setEmail("");
       setMessage("");
-    }, 1200);
+    } catch (err: any) {
+      setErrorMsg(err.message || "Failed to process delivery. Please check network connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

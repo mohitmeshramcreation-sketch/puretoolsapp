@@ -80,6 +80,46 @@ async function startServer() {
     }
   });
 
+  // Secure server-side Contact and Feedback inquiry processor
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, topic, message } = req.body;
+      if (!name || !email || !message) {
+        return res.status(400).json({ error: "Name, email, and message are required." });
+      }
+
+      // Hardcoded server-side email to shield it completely from browser bundles/logs
+      const targetEmail = "mohitmeshramcreation" + "@" + "gmail.com";
+
+      // Forward to a reliable, secure form handler service via Node's native fetch
+      // This is processed fully server-side. The client never sees this URL or the email.
+      const response = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: `PureTool Inquiry: ${topic.toUpperCase()} from ${name}`,
+          message: message,
+          _honey: "" // anti-spam honeypot
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Form delivery network failure.");
+      }
+
+      const result = await response.json();
+      res.json({ success: true, result });
+    } catch (e: any) {
+      console.error("Secure Contact Integration Error:", e);
+      res.status(500).json({ error: "Failed to securely deliver your submission. Please try again later." });
+    }
+  });
+
   // Serving web application static assets or linking Vite in dev environment
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
