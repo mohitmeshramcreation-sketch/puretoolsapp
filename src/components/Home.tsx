@@ -13,44 +13,44 @@ export default function Home({ onNavigate }: HomeProps) {
   const tools: ToolItem[] = [
     {
       id: "pdf-toolkit",
-      name: "PDF Toolkit",
+      name: "PDF Toolkit Suite",
       category: "PDF",
-      description: "Securely merge documents, split multi-page layers, compress payloads, or compile images directly to PDF booklets entirely locally.",
-      keywords: ["pdf tools online", "pdf merge", "pdf split", "compress PDF online"],
+      description: "Comprehensive free PDF tools online: Merge PDF online, split PDF online, or compress PDF files in seconds completely inside your browser memory.",
+      keywords: ["free PDF tools online", "compress PDF online", "merge PDF online", "split PDF online", "convert PDF files"],
       icon: "Layers",
       popular: true
     },
     {
       id: "image-compressor",
-      name: "Image Compressor & Converter",
+      name: "Image Compressor Pro",
       category: "Image",
-      description: "Compress JPEG, PNG, or WEBP in bulk, adjust quality ratios, scale heights/widths, and convert formats matching original visual balances.",
-      keywords: ["image compressor", "compress png", "compress jpeg", "convert webp to jpeg"],
+      description: "Our high-precision image compressor online allows you to compress image without losing quality. Works as a fast JPG compressor & PNG compressor.",
+      keywords: ["image compressor online", "compress image without losing quality", "JPG compressor", "PNG compressor"],
       icon: "Minimize"
     },
     {
       id: "file-converter",
       name: "Universal File Converter",
       category: "Format",
-      description: "Generate instant conversions between standard web asset formats: PNG to JPEG, WebP, or compile raw .txt logs into clean PDF sheets.",
-      keywords: ["convert files online", "png to jpg free", "convert webp to png"],
+      description: "Easily convert PDF files and transform image formats via our secure online image converter online. Works for bulk media assets naturally.",
+      keywords: ["convert PDF files", "image converter online", "convert images free"],
       icon: "FileCode"
     },
     {
       id: "qr-generator",
       name: "QR Code Generator",
       category: "Marketing",
-      description: "Instantly build beautiful custom QR Codes supporting custom texts, URL links, pre-populated emails, call lines, or wireless network access configurations.",
-      keywords: ["QR code generator", "generate qr", "custom wireless qr"],
+      description: "Best free QR code generator to create QR code online. Instantly build customized codes with our responsive, offline-first URL QR generator.",
+      keywords: ["free QR code generator", "create QR code online", "URL QR generator"],
       icon: "QrCode",
       popular: true
     },
     {
       id: "ai-text-tools",
-      name: "AI Text Tools & Writing Assistant",
+      name: "AI Writing Assistant & Text Suite",
       category: "AI",
-      description: "Harness server-side Gemini 3.5 models to produce professional outlines, proofread spellchecks, summarize dense files, or rewrite copywriting content.",
-      keywords: ["free AI tools", "AI writing assistant", "summarize dense files"],
+      description: "Access our stack of free AI writing tools: including AI text summarizer, AI grammar checker, and AI content assistant blocks powered by Google Gemini.",
+      keywords: ["free AI writing tools", "AI text summarizer", "AI grammar checker", "AI content assistant"],
       icon: "ClipboardList"
     }
   ];
@@ -58,40 +58,45 @@ export default function Home({ onNavigate }: HomeProps) {
   const benefits = [
     {
       title: "100% Client-Side Compiling",
-      description: "By doing the PDF rendering and image conversions inside your browser sandbox, your uploads are processed instantly without reaching database hosts.",
+      description: "By running the PDF rendering tools and image compressors right within your browser's local sandbox, files never upload to third-party databases.",
       icon: ShieldCheck,
       color: "indigo"
     },
     {
       title: "No Logins or Captchas",
-      description: "Generate results in seconds. PureTools carries absolutely zero sign-up constraints, verification walls, or limit caps.",
+      description: "Launch any of our user-friendly online utilities. Start editing documents directly without logging in, verifying captchas, or paying dynamic subscription fees.",
       icon: User,
       color: "sky"
     },
     {
       title: "CDN Fast Load Times",
-      description: "Designed with minimal web payloads, optimizing PageSpeed and core web health metrics for lightning fast operations under heavy congestion.",
+      description: "Optimized with minimal payload dimensions, increasing speed and fulfilling Core Web Vitals to deliver the best free web tools speed.",
       icon: Activity,
       color: "emerald"
     }
   ];
 
+  /* User-friendly online utilities: FAQ list containing critical search keywords */
   const faqs = [
     {
-      question: "Are my files secure on PureTools?",
-      answer: "Absolutely. PureTools operates on an offline-first browser sandbox model. For our PDF, Image Compressor, and File Converter utilities, processing occurs entirely within your system's memory using JS web assembly layers. No file bytes are sent to our hosts. The AI content tools process text variables using secure server-side API endpoints, which are purged immediately following response generation."
+      question: "Are these free online tools completely safe from external data leaks?",
+      answer: "Absolutely. PureTools is a premium offline-first online tools website. All file optimization, layout conversions, and PNG/JPG compressions run within the visual boundaries of your browser memory. We have zero database channels tracking or capturing your standard files. Only the Gemini companion utilizes secure APIs to verify outputs instantly."
     },
     {
-      question: "Why does PureTools carry only 5 tools?",
-      answer: "Most utility programs overwhelm users with fifty redundant, slow-loading templates they never use. We chose to craft exactly 5 high-fidelity, high-speed, frequently requested document and content tools to give an premium, ad-optimized toolset that processes folders in milliseconds."
+      question: "How can I compress image without losing quality using your tool?",
+      answer: "Our built-in image compressor online features advanced client algorithms that analyze JPEG/PNG color spectrums. This allows the tool to compress PNG and JPG assets down to small proportions while retaining sharp pixel definitions and vivid quality ratios."
     },
     {
-      question: "Is there a limit on file upload sizes?",
-      answer: "Because we process files directly using your own hardware memory (rather than paying for server processors), we do not throttle document uploads or file volumes! Large files assemble rapidly without timeout constraints."
+      question: "Is this the best free web tools suite for compiling and merging PDF documents?",
+      answer: "Yes, our dedicated free PDF tools online provide robust merge PDF online, split PDF online, and file conversion structures completely free of charge. Your workspace files compile at lightning-fast rates entirely on-screen without requiring download registration codes."
     },
     {
-      question: "How does the AI assistant tool communicate?",
-      answer: "The AI text suite relies on server-side proxies communicating with Gemini 3.5 models. Your sensitive API credentials remain locked, and individual chats are strictly private and unlogged."
+      question: "What capabilities do the free AI writing tools offer?",
+      answer: "Our smart AI content assistant provides five intuitive copywriting utility nodes: a highly precise AI text summarizer for long reports, a strict AI grammar checker for proofing clean sentences, an engaging rewrite block with target tone selectors, and visual brainstorming sections."
+    },
+    {
+      question: "Does the universal file converter preserve format layouts?",
+      answer: "Yes. When you convert PDF files or transform images using our image converter online, our systems preserve visual dimensions and scaling models so you get flawless outputs every time on any platform."
     }
   ];
 
@@ -193,6 +198,25 @@ export default function Home({ onNavigate }: HomeProps) {
                 onClick={() => onNavigate(tool.id)}
                 className="group relative bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 hover:border-indigo-100 dark:hover:border-indigo-950 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
+                {/* Visual section comments for crawler indices: */}
+                {tool.id === "pdf-toolkit" && (
+                  <>
+                    {/* Online PDF tools section */}
+                    {/* PDF merge split and compress PDF online utilities */}
+                  </>
+                )}
+                {tool.id === "image-compressor" && (
+                  <>
+                    {/* Free image compression tools */}
+                    {/* High ratios JPG compressor and PNG compressor online */}
+                  </>
+                )}
+                {tool.id === "ai-text-tools" && (
+                  <>
+                    {/* AI productivity tools */}
+                    {/* Google Gemini powered AI text summarizer and AI grammar checker */}
+                  </>
+                )}
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 text-indigo-500 group-hover:scale-110 transition duration-300">
@@ -239,6 +263,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* 3. Benefits / Why PureTools section */}
+      {/* User-friendly online utilities */}
       <section className="bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-900 transition-all py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-2">

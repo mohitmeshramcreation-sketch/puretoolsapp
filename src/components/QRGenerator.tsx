@@ -377,7 +377,7 @@ export default function QRGenerator() {
             <img
               referrerPolicy="no-referrer"
               src={qrDataUrl}
-              alt="Generated custom QR code"
+              alt="Generated custom QR code created instantly with our free QR code generator"
               className="w-full h-full object-contain rounded"
             />
           ) : (

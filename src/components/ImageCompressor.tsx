@@ -329,7 +329,7 @@ export default function ImageCompressor() {
                     <img
                       referrerPolicy="no-referrer"
                       src={file.compressedUrl}
-                      alt="Output thumbnail preview"
+                      alt={`Compressed preview of ${file.name} optimized via image compressor online`}
                       className="h-16 w-16 object-cover bg-slate-50 border border-slate-100 rounded-xl"
                     />
 

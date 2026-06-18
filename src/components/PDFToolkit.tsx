@@ -547,7 +547,7 @@ export default function PDFToolkit() {
                   <div className="grid grid-cols-4 gap-2.5 max-h-40 overflow-y-auto pr-1">
                     {imageQueue.map((img, idx) => (
                       <div key={img.id} className="relative group rounded-lg overflow-hidden border border-slate-100 dark:border-slate-800 aspect-square">
-                        <img referrerPolicy="no-referrer" src={img.url} className="h-full w-full object-cover" />
+                        <img referrerPolicy="no-referrer" src={img.url} alt={`Uploaded image file number ${idx + 1} to compile in PDF toolkit free online`} className="h-full w-full object-cover" />
                         <span className="absolute bottom-1 left-1.5 font-mono text-xs font-bold text-white bg-black/60 px-1 py-0.5 rounded leading-none">
                           #{idx + 1}
                         </span>
