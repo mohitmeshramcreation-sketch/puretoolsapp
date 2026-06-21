@@ -23,7 +23,8 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
     { id: "image-compressor", label: "Image Compressor" },
     { id: "file-converter", label: "File Converter" },
     { id: "qr-generator", label: "QR Generator" },
-    { id: "ai-text-tools", label: "AI Writing Text Tools" }
+    { id: "ai-text-tools", label: "AI Writing Text Tools" },
+    { id: "seo-optimizer", label: "SEO & Search Console" }
   ];
 
   const handleNavItemClick = (pageId: PageId) => {

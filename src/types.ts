@@ -6,6 +6,7 @@ export type PageId =
   | "file-converter"
   | "qr-generator"
   | "ai-text-tools"
+  | "seo-optimizer"
   | "about"
   | "contact"
   | "privacy"

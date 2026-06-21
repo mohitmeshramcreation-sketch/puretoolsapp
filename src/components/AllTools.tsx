@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PageId, ToolItem } from "../types";
-import { Search, Layers, Minimize, FileCode, QrCode, ClipboardList, Sparkles, Star } from "lucide-react";
+import { Search, Layers, Minimize, FileCode, QrCode, ClipboardList, Sparkles, Star, ShieldCheck } from "lucide-react";
 
 interface AllToolsProps {
   onNavigate: (pageId: PageId) => void;
@@ -52,6 +52,15 @@ export default function AllTools({ onNavigate }: AllToolsProps) {
       description: "Harness server-side Gemini 3.5 models to produce professional outlines, proofread spellchecks, summarize dense files, or rewrite copywriting content.",
       keywords: ["free AI tools", "AI writing assistant", "summarize dense files"],
       icon: "ClipboardList"
+    },
+    {
+      id: "seo-optimizer",
+      name: "SEO & Google Search Console Optimizer",
+      category: "AI",
+      description: "Inject ownership meta tags, construct valid dynamic sitemap.xml files, configure robots.txt formats, and follow organic search checklists.",
+      keywords: ["google site verification tag", "sitemap generator online", "robots txt builder", "google search console optimization", "rank at top search"],
+      icon: "ShieldCheck",
+      popular: true
     }
   ];
 
@@ -69,6 +78,8 @@ export default function AllTools({ onNavigate }: AllToolsProps) {
         return QrCode;
       case "ClipboardList":
         return ClipboardList;
+      case "ShieldCheck":
+        return ShieldCheck;
       default:
         return Sparkles;
     }
@@ -91,10 +102,10 @@ export default function AllTools({ onNavigate }: AllToolsProps) {
       {/* Title head */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <h1 className="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
-          Our Suite of 5 Essential Utilities
+          Our Suite of 6 Essential Utilities
         </h1>
         <p className="text-xs text-slate-505 dark:text-slate-400 leading-normal">
-          We designed exactly 5 master-level local tools so you can process images, merge documents, create customized QR vectors, or write AI copy instantly with perfect private protection.
+          We designed exactly 6 master-level local tools so you can process images, merge documents, generate sitemaps/robots configurations, create customized QR vectors, or write AI copy instantly with perfect private protection.
         </p>
       </div>
 

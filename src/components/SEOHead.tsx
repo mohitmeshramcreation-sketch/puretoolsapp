@@ -9,7 +9,7 @@ interface SEOHeadProps {
 export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
   useEffect(() => {
     // Base URL configuration for canonicals and graphs
-    const baseUrl = "https://ais-pre-xdl4dxjr6aljj3m2ecxggc-1019715178748.asia-southeast1.run.app";
+    const baseUrl = "https://puretool.online";
     const currentSlug = pageId === "home" ? "" : pageId;
     const canonicalUrl = `${baseUrl}/${currentSlug}`;
 
@@ -277,6 +277,13 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
             ]
           }
         ];
+        break;
+
+      case "seo-optimizer":
+        title = "Google Search Console SEO Hook & Meta Tag Verification - PureTool";
+        description = "Optimize your website to rank at the top of Google Search. Prepare sitemaps, construct robots.txt files, and inject site verification tokens index-ready instantly.";
+        keywords = "google site verification tag, sitemap generator online, robots txt builder, google search console optimization, rank at top search";
+        schemas = [generateBreadcrumb("SEO & Search Console Optimizer", "seo-optimizer")];
         break;
 
       case "about":

@@ -52,6 +52,15 @@ export default function Home({ onNavigate }: HomeProps) {
       description: "Access our stack of free AI writing tools: including AI text summarizer, AI grammar checker, and AI content assistant blocks powered by Google Gemini.",
       keywords: ["free AI writing tools", "AI text summarizer", "AI grammar checker", "AI content assistant"],
       icon: "ClipboardList"
+    },
+    {
+      id: "seo-optimizer",
+      name: "SEO & Google Search Console Optimizer",
+      category: "AI",
+      description: "Prepare and optimize your site for Google: inject verification tokens, build dynamic sitemap.xml files, prepare robots.txt templates, and run ranking audits instantly.",
+      keywords: ["google site verification tag", "sitemap generator online", "robots txt builder", "google search console optimization", "rank at top search"],
+      icon: "ShieldCheck",
+      popular: true
     }
   ];
 
@@ -118,6 +127,8 @@ export default function Home({ onNavigate }: HomeProps) {
         return QrCode;
       case "ClipboardList":
         return ClipboardList;
+      case "ShieldCheck":
+        return ShieldCheck;
       default:
         return Sparkles;
     }

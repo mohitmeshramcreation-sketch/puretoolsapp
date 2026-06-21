@@ -20,13 +20,40 @@ import Contact from "./components/Contact";
 import Privacy from "./components/Privacy";
 import Terms from "./components/Terms";
 import Disclaimer from "./components/Disclaimer";
+import SEOOptimizer from "./components/SEOOptimizer";
+
+const pathToPageId = (path: string): PageId => {
+  const clean = path.replace(/\/$/, "").toLowerCase();
+  if (clean === "" || clean === "/") return "home";
+  if (clean === "/all-tools") return "all-tools";
+  if (clean === "/pdf-toolkit") return "pdf-toolkit";
+  if (clean === "/image-compressor") return "image-compressor";
+  if (clean === "/file-converter") return "file-converter";
+  if (clean === "/qr-generator") return "qr-generator";
+  if (clean === "/ai-text-tools") return "ai-text-tools";
+  if (clean === "/seo-optimizer") return "seo-optimizer";
+  if (clean === "/about") return "about";
+  if (clean === "/contact") return "contact";
+  if (clean === "/privacy") return "privacy";
+  if (clean === "/terms") return "terms";
+  if (clean === "/disclaimer") return "disclaimer";
+  return "home";
+};
+
+const pageIdToPath = (pageId: PageId): string => {
+  if (pageId === "home") return "/";
+  return `/${pageId}`;
+};
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageId>("home");
+  const [currentPage, setCurrentPage] = useState<PageId>(() => {
+    return pathToPageId(window.location.pathname);
+  });
   const [darkMode, setDarkMode] = useState(false);
 
-  // Monitor and load light/dark theme settings from local storage
+  // Monitor/load theme settings, sync browser history state, and load dynamic verification
   useEffect(() => {
+    // 1. Theme Configuration
     const savedTheme = localStorage.getItem("puretool-theme");
     if (savedTheme === "dark") {
       setDarkMode(true);
@@ -35,6 +62,26 @@ export default function App() {
       setDarkMode(false);
       document.documentElement.classList.remove("dark");
     }
+
+    // 2. Google Search Console ownership Tag live injection (on first load)
+    const savedGsc = localStorage.getItem("gsc-verification-code");
+    if (savedGsc) {
+      let metaTag = document.querySelector('meta[name="google-site-verification"]');
+      if (!metaTag) {
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("name", "google-site-verification");
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute("content", savedGsc);
+    }
+
+    // 3. Keep Router states responsive to standard popstate (back/forward history gestures)
+    const handlePopState = () => {
+      const pageId = pathToPageId(window.location.pathname);
+      setCurrentPage(pageId);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   const handleToggleDarkMode = () => {
@@ -51,6 +98,10 @@ export default function App() {
 
   const handleNavigate = (pageId: PageId) => {
     setCurrentPage(pageId);
+    const path = pageIdToPath(pageId);
+    if (window.location.pathname !== path) {
+      window.history.pushState(null, "", path);
+    }
     // Smooth auto scroll to top of viewport upon shifting pages
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -71,6 +122,8 @@ export default function App() {
         return <QRGenerator />;
       case "ai-text-tools":
         return <AITextTools />;
+      case "seo-optimizer":
+        return <SEOOptimizer />;
       case "about":
         return <About onNavigate={handleNavigate} />;
       case "contact":
