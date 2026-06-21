@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ais-pre-xdl4dxjr6aljj3m2ecxggc-1019715178748.asia-southeast1.run.app/sitemap.xml
+Sitemap: https://puretool.online/sitemap.xml
