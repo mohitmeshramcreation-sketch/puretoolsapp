@@ -9,7 +9,10 @@ export default function SEOOptimizer() {
 
   // Load initially saved verification
   useEffect(() => {
-    const saved = localStorage.getItem("gsc-verification-code") || "";
+    const saved = localStorage.getItem("gsc-verification-code") || "9AOl1ajBFUCb1TO1prZCTWyxSlwd_tKjmLrB0M3Dseg";
+    if (!localStorage.getItem("gsc-verification-code")) {
+      localStorage.setItem("gsc-verification-code", "9AOl1ajBFUCb1TO1prZCTWyxSlwd_tKjmLrB0M3Dseg");
+    }
     setVerificationCode(saved);
     setSavedVerification(saved);
   }, []);

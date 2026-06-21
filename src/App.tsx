@@ -64,7 +64,10 @@ export default function App() {
     }
 
     // 2. Google Search Console ownership Tag live injection (on first load)
-    const savedGsc = localStorage.getItem("gsc-verification-code");
+    const savedGsc = localStorage.getItem("gsc-verification-code") || "9AOl1ajBFUCb1TO1prZCTWyxSlwd_tKjmLrB0M3Dseg";
+    if (!localStorage.getItem("gsc-verification-code")) {
+      localStorage.setItem("gsc-verification-code", "9AOl1ajBFUCb1TO1prZCTWyxSlwd_tKjmLrB0M3Dseg");
+    }
     if (savedGsc) {
       let metaTag = document.querySelector('meta[name="google-site-verification"]');
       if (!metaTag) {
