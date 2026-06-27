@@ -27,7 +27,7 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
       "@id": `${baseUrl}/#organization`,
       "name": "PureTool",
       "url": baseUrl,
-      "logo": `${baseUrl}/logo.png`,
+      "logo": `${baseUrl}/favicon.png`,
     };
 
     // Base website object
