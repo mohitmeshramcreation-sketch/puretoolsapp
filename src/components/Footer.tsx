@@ -15,9 +15,11 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Core Description Column */}
         <div className="md:col-span-5 space-y-4">
           <div onClick={() => onNavigate("home")} className="flex items-center gap-2 cursor-pointer group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-500 to-sky-450 text-white">
-              <Wrench className="h-4.5 w-4.5 rotate-45" />
-            </div>
+            <img 
+              src="/favicon.png" 
+              alt="PureTool Logo" 
+              className="h-8 w-8 rounded-lg object-contain shadow-xs group-hover:scale-105 transition-all duration-300" 
+            />
             <span className="font-display text-sm font-extrabold tracking-tight text-slate-955 dark:text-white group-hover:text-indigo-600 transition">
               PureTool
             </span>

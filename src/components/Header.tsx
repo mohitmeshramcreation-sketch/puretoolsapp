@@ -41,9 +41,11 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
           onClick={() => handleNavItemClick("home")} 
           className="flex cursor-pointer items-center gap-2.5 group"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500 to-sky-400 text-white shadow-xs group-hover:scale-105 transition-all">
-            <Wrench className="h-5 w-5 rotate-45 group-hover:rotate-90 transition-all duration-300" />
-          </div>
+          <img 
+            src="/favicon.png" 
+            alt="PureTool Logo" 
+            className="h-9 w-9 rounded-xl object-contain shadow-sm group-hover:scale-105 transition-all duration-300" 
+          />
           <div>
             <span className="font-display text-base font-extrabold tracking-tight text-slate-900 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400 transition">
               PureTool
