@@ -20,12 +20,22 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
 
   const toolsSubitems = [
     { id: "pdf-toolkit", label: "PDF Toolkit" },
+    { id: "pdf-compressor", label: "PDF Compressor" },
+    { id: "pdf-to-word", label: "PDF to Word Converter" },
     { id: "image-compressor", label: "Image Compressor" },
+    { id: "image-resizer", label: "Image Resizer" },
+    { id: "jpg-to-png", label: "JPG to PNG Converter" },
+    { id: "png-to-jpg", label: "PNG to JPG Converter" },
     { id: "file-converter", label: "File Converter" },
     { id: "qr-generator", label: "QR Generator" },
     { id: "ai-text-tools", label: "AI Writing Text Tools" },
     { id: "seo-optimizer", label: "SEO & Search Console" }
   ];
+
+  const pageIdToPath = (id: string): string => {
+    if (id === "home") return "/";
+    return `/${id}`;
+  };
 
   const handleNavItemClick = (pageId: PageId) => {
     onNavigate(pageId);
@@ -37,8 +47,12 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Brand Name Group logo */}
-        <div 
-          onClick={() => handleNavItemClick("home")} 
+        <a 
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavItemClick("home");
+          }} 
           className="flex cursor-pointer items-center gap-2.5 group"
         >
           <img 
@@ -54,7 +68,7 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
               No-auth
             </span>
           </div>
-        </div>
+        </a>
 
         {/* Desktop Navbar menu Items */}
         <nav className="hidden md:flex items-center gap-8">
@@ -63,26 +77,34 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
               Explore Tools
               <span className="h-1 w-1 rounded-full bg-indigo-500 ml-1"></span>
             </button>
-            <div className="invisible group-hover/menu:visible opacity-0 group-hover/menu:opacity-100 absolute top-full left-0 mt-1.5 w-56 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-2 shadow-xl transition-all duration-200">
+            <div className="invisible group-hover/menu:visible opacity-0 group-hover/menu:opacity-100 absolute top-full left-0 mt-1.5 w-60 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-2 shadow-xl transition-all duration-200 max-h-[420px] overflow-y-auto scrollbar-thin">
               {toolsSubitems.map((sub) => (
-                <button
+                <a
                   key={sub.id}
-                  onClick={() => handleNavItemClick(sub.id as PageId)}
+                  href={pageIdToPath(sub.id)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavItemClick(sub.id as PageId);
+                  }}
                   className={`w-full flex items-center justify-between rounded-xl px-4 py-2.5 text-left text-xs font-medium text-slate-700 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-850/60 hover:text-indigo-600 dark:hover:text-indigo-455 transition cursor-pointer ${
                     currentPageId === sub.id && "bg-indigo-50/50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400"
                   }`}
                 >
                   {sub.label}
                   <ArrowRight className="h-3 w-3 opacity-0 hover:opacity-100 transition" />
-                </button>
+                </a>
               ))}
             </div>
           </div>
 
           {navigationItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => handleNavItemClick(item.id as PageId)}
+              href={pageIdToPath(item.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavItemClick(item.id as PageId);
+              }}
               className={`text-xs font-semibold transition cursor-pointer ${
                 currentPageId === item.id
                   ? "text-indigo-600 dark:text-indigo-400 font-bold"
@@ -90,7 +112,7 @@ export default function Header({ currentPageId, onNavigate, darkMode, onToggleDa
               }`}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
 

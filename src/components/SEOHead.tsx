@@ -200,10 +200,105 @@ export default function SEOHead({ pageId, toolName }: SEOHeadProps) {
                 "name": "How can I compress image without losing quality?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our intelligent browser engine compresses images by utilizing visual science algorithms, removing redundant metadata metadata and adjusting non-visible color blocks to lower file weight while preserving pixel layouts."
+                  "text": "Our intelligent browser engine compresses images by utilizing visual science algorithms, removing redundant metadata and adjusting non-visible color blocks to lower file weight while preserving pixel layouts."
                 }
               }
             ]
+          }
+        ];
+        break;
+
+      case "image-resizer":
+        title = "Free Image Resizer Online | Resize Image Dimensions - PureTool";
+        description = "Resize image dimensions online easily with our free image resizer. Scale width & height percent, adjust aspect ratios, and convert images completely client-side.";
+        keywords = "image resizer online, resize image dimensions, scale image width, change image size, free image resizer";
+        
+        schemas = [
+          generateBreadcrumb("Image Resizer", "image-resizer"),
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PureTool Image Resizer",
+            "operatingSystem": "All",
+            "applicationCategory": "DesignApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "High performance client-side image resizer and dimension scaler to adjust dimensions instantly without uploading."
+          }
+        ];
+        break;
+
+      case "jpg-to-png":
+        title = "JPG to PNG Converter Online | Convert JPG to PNG Free - PureTool";
+        description = "Convert JPG to PNG online free of charge. Our high-precision client-side image converter converts your JPEG/JPG files to high-quality PNG formats instantly.";
+        keywords = "convert JPG to PNG, JPG to PNG converter, convert JPEG to PNG, image converter online";
+        
+        schemas = [
+          generateBreadcrumb("JPG to PNG Converter", "jpg-to-png"),
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PureTool JPG to PNG Converter",
+            "operatingSystem": "All",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Convert JPG to PNG online instantly with 100% private client-side image conversion."
+          }
+        ];
+        break;
+
+      case "png-to-jpg":
+        title = "PNG to JPG Converter Online | Convert PNG to JPG Free - PureTool";
+        description = "Convert PNG to JPG online for free. Transparent background gets pre-filled with white color for a perfect PNG to JPEG transition in milliseconds.";
+        keywords = "convert PNG to JPG, PNG to JPG converter, convert PNG to JPEG, PNG to JPG free";
+        
+        schemas = [
+          generateBreadcrumb("PNG to JPG Converter", "png-to-jpg"),
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PureTool PNG to JPG Converter",
+            "operatingSystem": "All",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Convert transparent PNG files to optimized JPG files with prefilled white backgrounds instantly."
+          }
+        ];
+        break;
+
+      case "pdf-to-word":
+        title = "PDF to Word Converter Online | Extract PDF to Text & Word - PureTool";
+        description = "Convert PDF to Word online free. Extract readable text and layout formatting from your PDF files to downloadable Word (.doc) or text formats easily.";
+        keywords = "pdf to word converter, convert pdf to word, extract pdf text, pdf to docx, free pdf to word";
+        
+        schemas = [
+          generateBreadcrumb("PDF to Word Converter", "pdf-to-word"),
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PureTool PDF to Word Converter",
+            "operatingSystem": "All",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Convert PDF files into editable document or text files client-side without any cloud uploads."
+          }
+        ];
+        break;
+
+      case "pdf-compressor":
+        title = "Free PDF Compressor Online | Reduce PDF File Size - PureTool";
+        description = "Compress PDF files online to lower file weights. Choose between medium or extreme compression levels to reduce PDF size without losing document layout quality.";
+        keywords = "compress pdf online, reduce pdf file size, pdf compressor free, optimize pdf size, free pdf compressor";
+        
+        schemas = [
+          generateBreadcrumb("PDF Compressor", "pdf-compressor"),
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PureTool PDF Compressor",
+            "operatingSystem": "All",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Client-side PDF size optimizer to reduce PDF payload sizes completely inside browser memory safely."
           }
         ];
         break;

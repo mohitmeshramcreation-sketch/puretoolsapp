@@ -13,6 +13,8 @@ import AllTools from "./components/AllTools";
 import PDFToolkit from "./components/PDFToolkit";
 import ImageCompressor from "./components/ImageCompressor";
 import FileConverter from "./components/FileConverter";
+import PDFToWord from "./components/PDFToWord";
+import RelatedTools from "./components/RelatedTools";
 import QRGenerator from "./components/QRGenerator";
 import AITextTools from "./components/AITextTools";
 import About from "./components/About";
@@ -28,6 +30,11 @@ const pathToPageId = (path: string): PageId => {
   if (clean === "/all-tools") return "all-tools";
   if (clean === "/pdf-toolkit") return "pdf-toolkit";
   if (clean === "/image-compressor") return "image-compressor";
+  if (clean === "/image-resizer") return "image-resizer";
+  if (clean === "/jpg-to-png") return "jpg-to-png";
+  if (clean === "/png-to-jpg") return "png-to-jpg";
+  if (clean === "/pdf-to-word") return "pdf-to-word";
+  if (clean === "/pdf-compressor") return "pdf-compressor";
   if (clean === "/file-converter") return "file-converter";
   if (clean === "/qr-generator") return "qr-generator";
   if (clean === "/ai-text-tools") return "ai-text-tools";
@@ -117,10 +124,20 @@ export default function App() {
         return <AllTools onNavigate={handleNavigate} />;
       case "pdf-toolkit":
         return <PDFToolkit />;
+      case "pdf-compressor":
+        return <PDFToolkit initialTab="compress" />;
       case "image-compressor":
         return <ImageCompressor />;
+      case "image-resizer":
+        return <ImageCompressor isResizer={true} />;
       case "file-converter":
         return <FileConverter />;
+      case "jpg-to-png":
+        return <FileConverter initialType="jpg-to-png" />;
+      case "png-to-jpg":
+        return <FileConverter initialType="png-to-jpg" />;
+      case "pdf-to-word":
+        return <PDFToWord />;
       case "qr-generator":
         return <QRGenerator />;
       case "ai-text-tools":
@@ -158,6 +175,7 @@ export default function App() {
       {/* 3. Main processing layout block */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {renderActivePage()}
+        <RelatedTools currentPageId={currentPage} onNavigate={handleNavigate} />
       </main>
 
       {/* 4. Cohesive support footer bar links */}

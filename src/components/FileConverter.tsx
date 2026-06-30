@@ -13,9 +13,13 @@ interface ConvertedFile {
   mimeType: string;
 }
 
-export default function FileConverter() {
+interface FileConverterProps {
+  initialType?: "png-to-jpg" | "jpg-to-png" | "webp-to-jpg" | "txt-to-pdf";
+}
+
+export default function FileConverter({ initialType = "png-to-jpg" }: FileConverterProps) {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [conversionType, setConversionType] = useState<"png-to-jpg" | "jpg-to-png" | "webp-to-jpg" | "txt-to-pdf">("png-to-jpg");
+  const [conversionType, setConversionType] = useState<"png-to-jpg" | "jpg-to-png" | "webp-to-jpg" | "txt-to-pdf"| any>(initialType);
   const [convertedFile, setConvertedFile] = useState<ConvertedFile | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");

@@ -13,12 +13,17 @@ interface CompressedFile {
   format: string;
 }
 
-export default function ImageCompressor() {
+interface ImageCompressorProps {
+  initialFormat?: "original" | "image/jpeg" | "image/png" | "image/webp";
+  isResizer?: boolean;
+}
+
+export default function ImageCompressor({ initialFormat = "original", isResizer = false }: ImageCompressorProps) {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [processedFiles, setProcessedFiles] = useState<CompressedFile[]>([]);
   const [quality, setQuality] = useState(80); // 10-100%
-  const [targetWidthPercent, setTargetWidthPercent] = useState(100); // 10-100% scale
-  const [targetFormat, setTargetFormat] = useState<"original" | "image/jpeg" | "image/png" | "image/webp">("original");
+  const [targetWidthPercent, setTargetWidthPercent] = useState(isResizer ? 75 : 100); // 10-100% scale
+  const [targetFormat, setTargetFormat] = useState<"original" | "image/jpeg" | "image/png" | "image/webp">(initialFormat);
   const [isProcessing, setIsProcessing] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -150,7 +155,7 @@ export default function ImageCompressor() {
         <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-xs">
           <h3 className="font-display text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
             <ImageIcon className="h-5 w-5 text-indigo-500" />
-            Upload Target Images
+            {isResizer ? "Image Resizer Pro" : "Upload Target Images"}
           </h3>
 
           {/* Upload Drop Container */}

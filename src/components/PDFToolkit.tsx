@@ -10,8 +10,12 @@ interface PDFMeta {
   fileObject: File;
 }
 
-export default function PDFToolkit() {
-  const [activeTab, setActiveTab] = useState<"merge" | "split" | "compress" | "img-to-pdf">("merge");
+interface PDFToolkitProps {
+  initialTab?: "merge" | "split" | "compress" | "img-to-pdf";
+}
+
+export default function PDFToolkit({ initialTab = "merge" }: PDFToolkitProps) {
+  const [activeTab, setActiveTab] = useState<"merge" | "split" | "compress" | "img-to-pdf" | any>(initialTab);
   const [pdfQueue, setPdfQueue] = useState<PDFMeta[]>([]);
   const [imageQueue, setImageQueue] = useState<{ id: string; file: File; url: string }[]>([]);
   const [splitPdfInput, setSplitPdfInput] = useState<PDFMeta | null>(null);
