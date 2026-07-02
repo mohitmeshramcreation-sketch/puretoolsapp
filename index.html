@@ -21,9 +21,6 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="shortcut icon" href="/favicon.png" />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://puretool.online/" />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://puretool.online/" />
@@ -43,7 +40,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO Fallback Content for Crawlers & Indexers (Replaced dynamically on React load) -->
+      <header style="padding: 20px; font-family: sans-serif; max-width: 1200px; margin: 0 auto; display: none;">
+        <h1>PureTool - Free Online Tools & Useful Utilities Suite</h1>
+        <p>Discover PureTool, your all-in-one online tools website featuring free productivity tools, high-speed file converter utility blocks, PNG/JPG compressors, and advanced AI assistants.</p>
+      </header>
+      <main style="padding: 20px; font-family: sans-serif; max-width: 1200px; margin: 0 auto; display: none;">
+        <section>
+          <h2>Our Free Online Web Tools & Utilities</h2>
+          <p>Access our high-performance productivity utilities directly in your browser. All conversions and modifications happen locally inside your browser memory without uploading files to any remote server.</p>
+          <ul style="line-height: 2;">
+            <li><a href="/image-compressor"><strong>Image Compressor Pro</strong></a> - Compress image without losing quality online. Works as a fast client-side JPG compressor and PNG compressor.</li>
+            <li><a href="/image-resizer"><strong>Image Resizer Online</strong></a> - Scale dimensions, crop, and resize images with custom aspect ratios completely in-browser.</li>
+            <li><a href="/jpg-to-png"><strong>JPG to PNG Converter</strong></a> - Convert JPG/JPEG images to high-quality transparent PNG format instantly.</li>
+            <li><a href="/png-to-jpg"><strong>PNG to JPG Converter</strong></a> - Convert PNG images to optimized JPG files with customizable background colors.</li>
+            <li><a href="/pdf-to-word"><strong>PDF to Word Converter</strong></a> - Extract text and structure from PDF files and convert them into editable Word documents.</li>
+            <li><a href="/pdf-compressor"><strong>PDF Compressor Online</strong></a> - Reduce PDF file size and optimize documents while preserving original layout structures.</li>
+            <li><a href="/pdf-toolkit"><strong>PDF Toolkit Suite</strong></a> - Merge multiple PDFs or split PDF pages into individual documents instantly.</li>
+            <li><a href="/file-converter"><strong>Universal File Converter</strong></a> - Fast offline file format converter for image, text, and document compilation.</li>
+            <li><a href="/qr-generator"><strong>QR Code Generator</strong></a> - Create custom SVG or PNG QR codes offline for URLs, contacts, text, or emails.</li>
+            <li><a href="/ai-text-tools"><strong>AI Writing Assistant & Text Suite</strong></a> - Free AI writing tools including text summarizer, grammar checker, and content generator.</li>
+            <li><a href="/seo-optimizer"><strong>SEO & Search Console Optimizer</strong></a> - Generate sitemaps, robots.txt, and verify ownership schemas easily.</li>
+          </ul>
+        </section>
+        <section style="margin-top: 40px;">
+          <h3>Why Choose PureTool?</h3>
+          <ul>
+            <li><strong>Complete Privacy:</strong> Your files never leave your computer. All processing is 100% client-side.</li>
+            <li><strong>Unlimited Free Use:</strong> No subscriptions, no limits, no registration, and no credit systems.</li>
+            <li><strong>High Speed:</strong> Processing uses your local browser memory for instant results with no upload delays.</li>
+          </ul>
+        </section>
+      </main>
+      <footer style="padding: 20px; text-align: center; font-family: sans-serif; color: #666; font-size: 14px; display: none;">
+        <p>&copy; 2026 PureTool. All rights reserved. <a href="/about">About</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+      </footer>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
